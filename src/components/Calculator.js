@@ -20,7 +20,9 @@ function Calculator() {
             setIsOperatorClicked(false);
         }
         else if (clickedNum === '+/-') {
-            if (!isOperatorClicked) {
+            if (num1.length === 0) {
+                setNum('');
+            } else if (!isOperatorClicked) {
                 setNum1(num1 *= -1);
                 setNum(num1);
             } else {
@@ -50,6 +52,11 @@ function Calculator() {
         }
         else if (clickedNum === '=') {
             setIsOperatorClicked(true);
+            if (operator === '-' && num2 < 0) {
+                setNum2(num2 *= -1);
+                setOperator('+');
+                return;
+            }
             setNum(eval(num1 + operator + num2));
             setNum1('');
             setNum2('');
