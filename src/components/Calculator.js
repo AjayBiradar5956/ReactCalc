@@ -52,6 +52,7 @@ function Calculator() {
         }
         else if (clickedNum === '=') {
             setIsOperatorClicked(true);
+            // 8 - (-5) = 13
             if (operator === '-' && num2 < 0) {
                 setNum2(num2 *= -1);
                 setOperator('+');
