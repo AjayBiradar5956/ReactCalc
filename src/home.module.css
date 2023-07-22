@@ -1,0 +1,45 @@
+.container {
+    background-color: lightgray;
+    height: 450px;
+    width: 450px;
+    align-self: center;
+}
+
+.display {
+    height: 15vh;
+    color: white;
+    background-color: black;
+    text-align: right;
+    font-size: 50px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.buttonSec {
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto auto;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1px 1px;
+    background-color: lightslategray;
+}
+
+button {
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    height: 80px;
+    width: 110px;
+    cursor: pointer;
+}
+
+.zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+}
