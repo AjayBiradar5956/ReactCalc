@@ -60,6 +60,7 @@ function Calculator() {
             setNum(eval(num1 + operator + num2));
             setNum1('');
             setNum2('');
+            setOperator('');
             setIsOperatorClicked(false);
         }
         else if (clickedNum === '.') {
@@ -105,7 +106,7 @@ function Calculator() {
                 <button>3</button>
                 <button disabled={isOperatorClicked} style={{ backgroundColor: 'orange' }}>+</button>
                 <button className={styles.zero}>0</button>
-                <button disabled={isOperatorClicked}>.</button>
+                <button>.</button>
                 <button style={{ backgroundColor: 'orange' }}>=</button>
             </div>
         </div>
