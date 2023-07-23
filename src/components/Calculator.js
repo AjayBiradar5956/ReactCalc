@@ -8,6 +8,25 @@ function Calculator() {
     let [operator, setOperator] = useState('');
     let [isOperatorClicked, setIsOperatorClicked] = useState(false);
 
+
+    function calculate(num1, operator, num2) {
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        switch (operator) {
+            case '+':
+                return (num1 + num2).toString();
+            case '-':
+                return (num1 - num2).toString();
+            case '*':
+                return (num1 * num2).toString();
+            case '/':
+                return (num1 / num2).toString();
+            default:
+                return '';
+        }
+    }
+
     //isOperatorClicked true, all the operators should be disabled except the equal to operator
     function handleBtnClick(e) {
         const clickedNum = e.target.innerText;
@@ -58,7 +77,8 @@ function Calculator() {
                 setOperator('+');
                 return;
             }
-            setNum(eval(num1 + operator + num2));
+            const result = calculate(num1, operator, num2);
+            setNum(result);
             setNum1('');
             setNum2('');
             setOperator('');
